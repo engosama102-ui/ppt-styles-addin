@@ -6,7 +6,7 @@
            xsi:type="TaskPaneApp">
   
   <!-- App ID - يجب أن يكون GUID فريد -->
-  <Id>12345678-1234-1234-1234-123456789abc</Id>
+  <Id>1e659295-cd54-49f0-8053-357a04243345</Id>
   <Version>1.0.0.0</Version>
   <ProviderName>PowerPoint Styles Manager</ProviderName>
   <DefaultLocale>ar-SA</DefaultLocale>
@@ -14,16 +14,16 @@
   <!-- اسم الـ Add-in -->
   <DisplayName DefaultValue="مدير أنماط PowerPoint"/>
   <Description DefaultValue="احفظ وطبق أنماط النص بسهولة في PowerPoint"/>
-  <IconUrl DefaultValue="https://YOUR-GITHUB-USERNAME.github.io/ppt-styles-addin/assets/icon-32.png"/>
-  <HighResolutionIconUrl DefaultValue="https://YOUR-GITHUB-USERNAME.github.io/ppt-styles-addin/assets/icon-64.png"/>
-  <SupportUrl DefaultValue="https://github.com/YOUR-GITHUB-USERNAME/ppt-styles-addin"/>
+  <IconUrl DefaultValue="https://engosama102-uiengosama102-ui.github.io/ppt-styles-addin/assets/icon-32.png"/>
+  <HighResolutionIconUrl DefaultValue="https://engosama102-ui.github.io/ppt-styles-addin/assets/icon-64.png"/>
+  <SupportUrl DefaultValue="https://github.com/engosama102-ui/ppt-styles-addin"/>
   
   <!-- الصلاحيات المطلوبة -->
   <Permissions>ReadWriteDocument</Permissions>
   
   <!-- عنوان الـ Taskpane -->
   <DefaultSettings>
-    <SourceLocation DefaultValue="https://YOUR-GITHUB-USERNAME.github.io/ppt-styles-addin/src/taskpane.html"/>
+    <SourceLocation DefaultValue="https://engosama102-ui.github.io/ppt-styles-addin/src/taskpane.html"/>
   </DefaultSettings>
   
   <!-- الإصدارات المدعومة -->
@@ -89,14 +89,14 @@
     <!-- النصوص والموارد -->
     <Resources>
       <bt:Images>
-        <bt:Image id="Icon.16x16" DefaultValue="https://YOUR-GITHUB-USERNAME.github.io/ppt-styles-addin/assets/icon-16.png"/>
-        <bt:Image id="Icon.32x32" DefaultValue="https://YOUR-GITHUB-USERNAME.github.io/ppt-styles-addin/assets/icon-32.png"/>
-        <bt:Image id="Icon.80x80" DefaultValue="https://YOUR-GITHUB-USERNAME.github.io/ppt-styles-addin/assets/icon-80.png"/>
+        <bt:Image id="Icon.16x16" DefaultValue="https://engosama102-ui.github.io/ppt-styles-addin/assets/icon-16.png"/>
+        <bt:Image id="Icon.32x32" DefaultValue="https://engosama102-ui.github.io/ppt-styles-addin/assets/icon-32.png"/>
+        <bt:Image id="Icon.80x80" DefaultValue="https://engosama102-ui.github.io/ppt-styles-addin/assets/icon-80.png"/>
       </bt:Images>
       <bt:Urls>
-        <bt:Url id="GetStarted.LearnMoreUrl" DefaultValue="https://github.com/YOUR-GITHUB-USERNAME/ppt-styles-addin"/>
-        <bt:Url id="Commands.Url" DefaultValue="https://YOUR-GITHUB-USERNAME.github.io/ppt-styles-addin/src/commands.html"/>
-        <bt:Url id="Taskpane.Url" DefaultValue="https://YOUR-GITHUB-USERNAME.github.io/ppt-styles-addin/src/taskpane.html"/>
+        <bt:Url id="GetStarted.LearnMoreUrl" DefaultValue="https://github.com/engosama102-ui/ppt-styles-addin"/>
+        <bt:Url id="Commands.Url" DefaultValue="https://engosama102-ui.github.io/ppt-styles-addin/src/commands.html"/>
+        <bt:Url id="Taskpane.Url" DefaultValue="https://engosama102-ui.github.io/ppt-styles-addin/src/taskpane.html"/>
       </bt:Urls>
       <bt:ShortStrings>
         <bt:String id="GetStarted.Title" DefaultValue="ابدأ مع مدير الأنماط!"/>
