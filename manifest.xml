@@ -14,7 +14,7 @@
   <!-- اسم الـ Add-in -->
   <DisplayName DefaultValue="مدير أنماط PowerPoint"/>
   <Description DefaultValue="احفظ وطبق أنماط النص بسهولة في PowerPoint"/>
-  <IconUrl DefaultValue="https://engosama102-uiengosama102-ui.github.io/ppt-styles-addin/assets/icon-32.png"/>
+  <IconUrl DefaultValue="https://engosama102-ui.github.io/ppt-styles-addin/assets/icon-32.png"/>
   <HighResolutionIconUrl DefaultValue="https://engosama102-ui.github.io/ppt-styles-addin/assets/icon-64.png"/>
   <SupportUrl DefaultValue="https://github.com/engosama102-ui/ppt-styles-addin"/>
   
