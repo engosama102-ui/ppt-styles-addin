@@ -1,0 +1,6 @@
+node_modules/
+out/qa/
+out/*.jpg
+out/*.png
+out/*.log
+out/vo-parts/
