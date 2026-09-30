@@ -1,0 +1,18 @@
+/**
+ * Voice-over paragraphs, one per scene, in scene order.
+ * scripts/generate_voiceover.py reads this same text from
+ * voiceover-script.txt. Keep both in sync if you edit the wording.
+ */
+export const voiceoverParagraphs: string[] = [
+  "Do your company's presentations still feel crowded, generic, and unable to land the message?",
+  'You may have a strong strategy and important data, but the way it is presented makes your audience lose focus.',
+  "That's where Graphify Pro comes in. We turn complex content into a clear, professional, and persuasive visual story.",
+  'We design board presentations, investor and sales decks, and company profiles that reflect the strength of your business.',
+  'We redesign annual reports, impact and sustainability reports, and research, so they are easier to read and understand.',
+  'We turn complex tables and numbers into charts and dashboards that help your audience see the meaning and decide.',
+  'We also build flexible templates and design systems, so your teams create consistent decks without starting from scratch.',
+  'And we adapt your story to every format, from decks to social posts, keeping your brand consistent.',
+  'We understand your goals, build the structure, design the visual system, review every detail, and deliver editable files.',
+  'The result? A clearer message, a stronger presence, and a presentation that persuades.',
+  "Have an important deck or report? Contact Graphify Pro, and let's turn your content into an experience worth attention.",
+];
