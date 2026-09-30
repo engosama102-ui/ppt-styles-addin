@@ -33,7 +33,7 @@ export const MarketSlide: React.FC<{ p?: number }> = ({ p = 1 }) => (
           <Num>12.4</Num>
           <span style={{ fontSize: 60, color: sc.blue }}> مليار</span>
         </div>
-        <div style={{ fontSize: 32, color: sc.slideMuted, lineHeight: 1.5 }}>نمو سنوي مركب يقارب <b style={{ color: '#C99700' }}>24%</b> حتى عام 2026</div>
+        <div style={{ fontSize: 32, color: sc.slideMuted, lineHeight: 1.5 }}>نمو سنوي مركب يقارب <b style={{ color: '#C99700' }}><Num>24%</Num></b> حتى عام 2026</div>
       </div>
       <Card style={{ flex: 1, display: 'flex', alignItems: 'flex-end' }}>
         <BarChart data={marketBars} p={p} width={740} height={470} fontSize={26} />
@@ -127,8 +127,9 @@ export const overviewRects = (() => {
 /** Agenda slide: every section is a live thumbnail that can be zoomed into. */
 export const OverviewSlide: React.FC<{ activeIndex?: number; highlight?: number }> = ({ activeIndex = -1, highlight = 0 }) => (
   <SlideCanvas>
-    <div style={{ position: 'absolute', top: 70, right: 120, fontSize: 26, fontWeight: 600, color: sc.blue }}>عرض المستثمرين</div>
-    <div style={{ position: 'absolute', top: 108, right: 120, fontSize: 60, fontWeight: 700, color: sc.slideInk }}>جدول الأعمال</div>
+    <div style={{ position: 'absolute', top: -170, right: 10, fontSize: 26, fontWeight: 600, color: sc.blue }}>عرض المستثمرين</div>
+    <div style={{ position: 'absolute', top: -132, right: 10, fontSize: 60, fontWeight: 700, color: sc.slideInk }}>جدول الأعمال</div>
+    <div style={{ position: 'absolute', top: -240, left: -110, width: 1600, height: 900 }}>
     {deckSections.map((s, i) => {
       const r = overviewRects[i];
       const Comp = deckComponents[s.id];
@@ -158,5 +159,6 @@ export const OverviewSlide: React.FC<{ activeIndex?: number; highlight?: number 
         </div>
       );
     })}
+    </div>
   </SlideCanvas>
 );
