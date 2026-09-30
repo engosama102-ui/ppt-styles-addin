@@ -1,0 +1,97 @@
+/**
+ * CENTRAL CONFIGURATION
+ * ---------------------
+ * Change the brand name, colors, services, contact details, navigation
+ * labels and optional slide images here. No animation code needs to change.
+ */
+
+export const brand = {
+  /** Latin wordmark. Always rendered left-to-right. */
+  name: 'Basira Visual',
+  /** Arabic reading of the name, used in narration and captions. */
+  nameArabic: 'بصيرة فيجوال',
+  /** Descriptor shown under the logo. */
+  descriptor: 'شريكك في التواصل البصري',
+
+  colors: {
+    navy: '#071526',
+    darkBlue: '#0B1F38',
+    blue: '#176BFF',
+    cyan: '#24C7D9',
+    gold: '#FFC928',
+    white: '#FFFFFF',
+    gray: '#9BA9BA',
+    /** Accent used for the soft edge glow in the background. */
+    violet: '#5B3FD9',
+    /** Surfaces used inside the sample slides. */
+    slideBg: '#F5F8FC',
+    slideInk: '#0B1F38',
+    slideMuted: '#6B7A8F',
+    slideLine: '#DCE3EC',
+  },
+
+  fonts: {
+    /** Loaded from public/fonts (see src/lib/fonts.ts). */
+    arabic: 'IBM Plex Sans Arabic',
+  },
+
+  /**
+   * Contact details shown on the final call to action.
+   * These are placeholders on purpose. Replace them with real values.
+   */
+  contact: {
+    website: '[WEBSITE]',
+    email: '[EMAIL]',
+    social: '[LINKEDIN OR BEHANCE]',
+  },
+
+  cta: {
+    headline: ['جاهزون لتحويل محتواكم', 'إلى تجربة بصرية مؤثرة؟'],
+    button: 'ابدأ مشروعك معنا',
+    secondary: 'شاركنا ملفك، واترك لنا مهمة تحويله.',
+  },
+
+  /** Top navigation shown during the five service scenes (right to left). */
+  navigation: ['العروض', 'التقارير', 'البيانات', 'القوالب', 'التعريب'],
+
+  /**
+   * Optional real slide images. Put PNG/JPG files (16:9 for slides,
+   * portrait for report pages) in public/slides and set the path here,
+   * for example: presentationMarket: 'slides/market.png'.
+   * Leave a value empty to use the built-in React/SVG sample design.
+   */
+  slideImages: {
+    badSlide: '',
+    goodSlide: '',
+    presentationOverview: '',
+    presentationStrategy: '',
+    presentationMarket: '',
+    presentationModel: '',
+    presentationRoadmap: '',
+    presentationSummary: '',
+    reportCover: '',
+    reportImpact: '',
+    reportEsg: '',
+    reportSummary: '',
+    reportProfile: '',
+    localizationEnglish: '',
+    localizationArabic: '',
+  } as Record<string, string>,
+} as const;
+
+export const audioMix = {
+  /** Voice-over gain in dB. Keep at 0 so narration stays dominant. */
+  voiceDb: 0,
+  /** Background music level when narration is present. */
+  musicDb: -22,
+  /** Extra reduction applied to the music while a paragraph is spoken. */
+  musicDuckDb: -3,
+  /** Music level used when no voice-over has been generated yet. */
+  musicNoVoiceDb: -15,
+  /** Sound-effect level. */
+  sfxDb: -14,
+  musicFadeInSec: 1.5,
+  musicFadeOutSec: 3,
+};
+
+export type Brand = typeof brand;
