@@ -6,7 +6,7 @@ import path from 'node:path';
 
 const browserExecutable = process.env.REMOTION_BROWSER_EXECUTABLE || undefined;
 const serveUrl = await bundle({ entryPoint: path.resolve('src/index.ts') });
-const composition = await selectComposition({ serveUrl, id: 'ElevateTrust', browserExecutable });
+const composition = await selectComposition({ serveUrl, id: process.env.COMP || 'ElevateTrustV2', browserExecutable });
 const args = process.argv.slice(2).map(Number);
 const { scenes } = { scenes: null };
 const jobs = args.length

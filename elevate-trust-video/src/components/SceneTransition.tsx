@@ -6,8 +6,8 @@ import { clamp, easeInOut } from '../lib/motion';
 export const SceneTransition: React.FC<{ duration: number; children: React.ReactNode; inF?: number; outF?: number }> = ({
   duration,
   children,
-  inF = 8,
-  outF = 8,
+  inF = 6,
+  outF = 5,
 }) => {
   const f = useCurrentFrame();
   const i = interpolate(f, [0, inF], [0, 1], { ...clamp, easing: easeInOut });

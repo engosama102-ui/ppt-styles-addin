@@ -64,12 +64,14 @@ export const MoneyFlow: React.FC<{
   pulses?: number[];
   pulseColor?: string;
   dashed?: boolean;
-}> = ({ points, draw, color = C.elevatePrimary, width = 4, opacity = 1, pulses = [], pulseColor, dashed }) => {
+  w?: number;
+  h?: number;
+}> = ({ points, draw, color = C.elevatePrimary, width = 4, opacity = 1, pulses = [], pulseColor, dashed, w = 1080, h = 1350 }) => {
   const s = sample(points);
   const L = lengthOf(s);
   const d = s.map((p, i) => `${i ? 'L' : 'M'}${p[0].toFixed(1)} ${p[1].toFixed(1)}`).join(' ');
   return (
-    <svg width={1080} height={1350} style={{ position: 'absolute', left: 0, top: 0, overflow: 'visible', opacity }}>
+    <svg width={w} height={h} style={{ position: 'absolute', left: 0, top: 0, overflow: 'visible', opacity }}>
       <path d={d} fill="none" stroke={color} strokeOpacity={0.18} strokeWidth={width * 3.5} strokeLinecap="round" strokeDasharray={`${L * draw} ${L}`} />
       <path
         d={d}

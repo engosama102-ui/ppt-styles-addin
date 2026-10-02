@@ -11,9 +11,15 @@
     "voiceover": "python scripts/generate_voiceover.py",
     "finalize": "python scripts/finalize.py",
     "build:final": "npm run render && npm run finalize && npm run stills",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "render:v2": "remotion render src/index.ts ElevateTrustV2 out/elevate-trust-v2.mp4",
+    "finalize:v2": "python scripts/finalize.py out/elevate-trust-v2.mp4",
+    "contact-sheet": "node scripts/contact-sheet.mjs",
+    "build:v2": "npm run render:v2 && npm run finalize:v2 && npm run contact-sheet",
+    "sound:v2": "python scripts/generate_sound.py 37.6 music-v2.wav"
   },
   "dependencies": {
+    "@fontsource-variable/archivo": "^5.3.0",
     "@fontsource/inter": "^5.3.0",
     "@remotion/cli": "^4.0.530",
     "@remotion/fonts": "^4.0.530",

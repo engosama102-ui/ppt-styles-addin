@@ -1,5 +1,6 @@
 node_modules/
 out/qa/
+out/sheet/
 out/*.jpg
 out/*.log
 out/vo-parts/

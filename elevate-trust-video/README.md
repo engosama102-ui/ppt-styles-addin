@@ -1,4 +1,53 @@
-# Elevate Pay: "Trust isn't built with $2.99"
+# Elevate Pay: "Trust isn't built with $2.99" (V2)
+
+**V2 is the current version.** Final video: `out/elevate-trust-v2.mp4`. Review sheet: `contact-sheet.jpg`. Rebuild everything with `npm run build:v2`.
+
+## What V2 changes
+
+- **Real proof:** the real screenshot is used, through a privacy-safe derivative (see below). The animated +$2.99 payment chip travels Upwork → Elevate Pay → My USD account, then morphs into the real screenshot. The camera then zooms to "Upwork Reward" and then to "+$2.99".
+- **Long-term trust is the hero:** a quiet "I've trusted Elevate since the early days." moment with an EARLY DAYS → TODAY timeline. The Elevate bar runs the full length, and payment marks light up along it, followed by "And stayed."
+- **Wise → Elevate is a main moment:** money streams leave the Wise card and the camera follows them to the Elevate card. Wise is shown as a neutral "Previous setup", never criticized.
+- **Brand language** comes from the supplied capture of elevatepay.co/upwork-giveaway and the app screenshot:
+  - the near-black → indigo → royal hero gradient
+  - the top glow from the CTA card
+  - the violet-blue `#4E51FC` pill
+  - indigo `#0E0F32` cards and pills (the same on the web and in the app)
+  - wide, heavy uppercase headlines (Archivo at expanded width)
+- **Upwork branding** uses the Upwork mark exactly as it appears in the Elevate app, cropped from the real screenshot.
+- **Rhythm:** impact → quiet → flow → flow (camera) → quiet hero → flow → flow → proof → emotional close → brand frame. Text is larger for mobile, with one focal point per frame.
+- **Length:** 37.6 s. The final frame is fully on screen by 1.1 s and holds for about 2.7 s.
+
+## Privacy: how the screenshot is protected
+
+- **Only a derivative is in the project.** The original screenshot is NOT stored in this repository. The project uses `public/assets/elevate-reward-sanitized.png`, made from it like this:
+  1. Only the transaction list area is kept. The balance, the status card and the buttons above it are cut away entirely.
+  2. Everything except the Upwork Reward row (Upwork Reward, Sep 2026, +$2.99, Reward received 🎉) is blurred twice (Gaussian 26 px + 14 px) and darkened 55%. The other rows, your name and the other amounts cannot be read or recovered from the file.
+- **The derivative is used as-is.** The video only scales, crops and zooms it. Nothing is redrawn or invented.
+- **To use a different screenshot,** repeat the same steps: keep the sharp band only around the reward row, and blur and darken the rest before you add it to `public/assets`.
+
+## Still needed: the official Elevate Pay logo
+
+elevatepay.co and public logo services were blocked from the build environment, and the page capture is too small (466 px wide) to cut a usable logo from. Until you add the logo, the name is set in type ("**Elevate**Pay"). This is not a recreation of the logo mark.
+
+To finish, save the official logo (light version, SVG or PNG) as `public/assets/elevate-logo.svg`. If it is a PNG, update the path in `src/data/assets.ts`. Then run `npm run build:v2`. Every Elevate placement picks it up automatically, including the cards, the Upwork flow, the timeline bar and the final lockup.
+
+## V2 files
+
+| What | Where |
+|---|---|
+| V2 copy | `src/v2/copy.ts` |
+| V2 scene lengths | `src/v2/timeline.ts` |
+| V2 scenes | `src/v2/scenes/V01Hook.tsx` … `V10Final.tsx` |
+| Brand helpers (wordmark, Upwork mark, cards, pills, background) | `src/v2/brand.tsx` |
+| Colors | `src/styles/tokens.ts` |
+| Screenshot zoom keyframes and focus box | `src/v2/scenes/V08Proof.tsx` (`keys`) |
+| Chip → screenshot hand-off geometry | `src/v2/handoff.ts` |
+| Music for V2 length | `npm run sound:v2` (writes `public/audio/music-v2.wav`) |
+| Optional V2 voice-over | save as `public/audio/voiceover-v2.mp3`; the music then drops to -26 dB under it |
+
+---
+
+# V1 (kept for reference)
 
 A 32-second, 1080 × 1350 (4:5) LinkedIn motion graphic about my personal experience using Elevate Pay as a long-term freelancer. Built with Remotion, React and TypeScript. The story is fully readable with the sound off.
 

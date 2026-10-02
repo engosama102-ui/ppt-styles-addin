@@ -5,7 +5,7 @@ Output:
   public/audio/music.wav           calm, optimistic, forward-moving bed (~32 s)
   public/audio/sfx/*.wav           notify, coin, whoosh, tick, click, bass
 
-Usage: python scripts/generate_sound.py [seconds]
+Usage: python scripts/generate_sound.py [seconds] [music-file-name]
 """
 import sys
 import wave
@@ -149,7 +149,8 @@ def sfx():
 
 if __name__ == "__main__":
     sec = float(sys.argv[1]) if len(sys.argv) > 1 else 32.0
-    write(OUT / "music.wav", music(sec))
+    name = sys.argv[2] if len(sys.argv) > 2 else "music.wav"
+    write(OUT / name, music(sec))
     for k, v in sfx().items():
         write(OUT / "sfx" / f"{k}.wav", v, -3)
     print(f"music {sec}s + {len(sfx())} sfx written to public/audio")

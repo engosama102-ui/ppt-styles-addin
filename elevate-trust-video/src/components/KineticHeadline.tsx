@@ -6,7 +6,7 @@ import { C } from '../styles/tokens';
 export type Seg = { t: string; tone?: 'primary' | 'green' | 'muted' | 'past' };
 
 const toneColor = (tone?: Seg['tone']) =>
-  tone === 'primary' ? C.elevatePrimary : tone === 'green' ? C.upworkGreen : tone === 'muted' ? C.elevateMuted : tone === 'past' ? C.past : C.elevateText;
+  tone === 'primary' ? C.elevateAccentText : tone === 'green' ? C.upworkGreen : tone === 'muted' ? C.elevateMuted : tone === 'past' ? C.past : C.elevateText;
 
 /**
  * Word-by-word masked reveal. Each word rises out of its own mask,

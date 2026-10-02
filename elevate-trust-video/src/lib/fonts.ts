@@ -7,11 +7,16 @@ export const ensureFonts = () => {
   if (started) return;
   started = true;
   const h = delayRender('fonts');
-  Promise.all(
-    ['300', '400', '500', '600', '700', '800'].map((w) =>
-      loadFont({ family: tokens.font.family, url: staticFile(`fonts/inter-latin-${w}-normal.woff2`), weight: w }),
-    ),
-  )
+  const body = ['300', '400', '500', '600', '700', '800'].map((w) =>
+    loadFont({ family: tokens.font.family, url: staticFile(`fonts/inter-latin-${w}-normal.woff2`), weight: w }),
+  );
+  const display = loadFont({
+    family: tokens.font.display,
+    url: staticFile('fonts/archivo-latin-wdth-normal.woff2'),
+    weight: '100 900',
+    stretch: '62% 125%',
+  });
+  Promise.all([...body, display])
     .then(() => continueRender(h))
     .catch((e) => {
       console.error(e);
