@@ -1,0 +1,17 @@
+# Optional English voice-over. One paragraph per cue, blank line between.
+# Format: <scene>|<offset seconds into scene>|<text>
+hook|0.4|$2.99. It's nice. But that's not why I trust Elevate.
+
+trust|0.3|Trust isn't built with a reward. It's built over years.
+
+before|0.2|As a freelancer working across borders, I used Wise.
+
+change|0.1|Then I found Elevate. I started early, and over time, I moved my freelance money there.
+
+trustMost|0.3|Years later, it's still the account I trust most for my freelance earnings.
+
+upwork|0.3|And now my Upwork payments come here too.
+
+proof|1.2|So yes, that $2.99 back is a nice bonus. But the trust came first.
+
+cta|1.6|For me, that's Elevate Pay.
