@@ -1,3 +1,34 @@
+# Elevate Pay trust film: FINAL (voice-synced)
+
+**Final deliverable:** `out/elevate-trust-final.mp4`. 40.85 s, 1080×1350, H.264/AAC, −16 LUFS. Rebuild it with `npm run build:final`.
+
+## The voice-over is the master timeline
+
+- **The voice is never altered.** `public/audio/voiceover-final.mp3` (ElevenLabs, 38.35 s) plays from 0 s at its original speed. It is never cut, stretched or regenerated.
+- **Cuts follow the words.** Scene cuts live in `src/final/timeline.ts` (`CUTS`). Every scene's internal beats are placed on measured word times, and the header of that file lists them.
+- **How the word times were measured:** pauses with FFmpeg `silencedetect`, and words with an offline PocketSphinx pass.
+- **On-screen text matches the spoken words,** so viewers with the sound off read the same story. For example: "It's built over time.", "Then, early on, I discovered Elevate.", "Over time, I moved my freelance earnings there.", "And I stayed.", "Including Upwork."
+- **Brand card:** after the last word (38.35 s), the brand card holds on the music tail until 40.8 s.
+
+## Mix
+
+| Element | Level |
+|---|---|
+| Voice | 0 dB, always on top |
+| Music under speech | −29 dB (about 15 dB below the voice) |
+| Music in pauses | −23 dB |
+| Music after the last word | −17 dB, then a 1.3 s fade |
+| Ducking | follows the speech segments in `SPEECH` (0.12 s attack, 0.35 s release) |
+
+- **Final loudness:** `scripts/loudnorm.py` applies one uniform two-pass linear gain to −16 LUFS (true peak about −1.3 dBTP). The balance and timing are unchanged.
+- **Mix settings and sound-effect cues** are in `src/final/ElevateTrustFinal.tsx` (`MIX`). Music for this length: `npm run sound:final`.
+
+## Retiming
+
+Edit `CUTS` in `src/final/timeline.ts`, then the beat times inside the matching `src/final/scenes/F*.tsx` file. Each scene header lists the spoken cue times it follows.
+
+---
+
 # Elevate Pay: "Trust isn't built with $2.99" (V2)
 
 **V2 is the current version.** Final video: `out/elevate-trust-v2.mp4`. Review sheet: `contact-sheet.jpg`. Rebuild everything with `npm run build:v2`.

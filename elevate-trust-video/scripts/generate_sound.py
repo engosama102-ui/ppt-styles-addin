@@ -50,7 +50,7 @@ def highpass(x, fc):
 
 def env(n, a, r):
     e = np.ones(n)
-    na, nr = int(a * SR), int(r * SR)
+    na, nr = min(int(a * SR), n // 2), min(int(r * SR), n // 2)
     e[:na] = np.linspace(0, 1, na)
     e[-nr:] *= np.linspace(1, 0, nr)
     return e
