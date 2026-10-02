@@ -19,7 +19,9 @@
     "sound:v2": "python scripts/generate_sound.py 37.6 music-v2.wav",
     "render:final": "remotion render src/index.ts ElevateTrustFinal out/elevate-trust-final.mp4",
     "finalize:final": "python scripts/finalize.py out/elevate-trust-final.mp4",
-    "sound:final": "python scripts/generate_sound.py 40.8 music-final.wav"
+    "sound:final": "python scripts/generate_sound.py 40.8 music-final.wav",
+    "render:reels": "remotion render src/index.ts ElevateTrustReels out/elevate-trust-reels.mp4",
+    "build:reels": "npm run render:reels && python scripts/finalize.py out/elevate-trust-reels.mp4 && python scripts/loudnorm.py out/elevate-trust-reels.mp4 -16"
   },
   "dependencies": {
     "@fontsource-variable/archivo": "^5.3.0",

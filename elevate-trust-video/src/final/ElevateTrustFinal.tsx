@@ -91,7 +91,7 @@ const Sound: React.FC = () => {
   );
 };
 
-const Bg: React.FC = () => {
+export const Bg: React.FC = () => {
   const f = useCurrentFrame();
   const cur = fScenes.find((x) => f >= x.from && f < x.from + x.duration) ?? fScenes[fScenes.length - 1];
   const glow = ['trust', 'early', 'close', 'cta', 'final'].includes(cur.key) ? 1.25 : 0.8;
@@ -100,9 +100,9 @@ const Bg: React.FC = () => {
   return <V2Background glow={glow} parallax={parallax} />;
 };
 
-export const ElevateTrustFinal: React.FC = () => (
+export const ElevateTrustFinal: React.FC<{ background?: boolean }> = ({ background = true }) => (
   <AbsoluteFill style={{ fontFamily: FONT, color: C.elevateText }}>
-    <Bg />
+    {background && <Bg />}
     {fScenes.map((sc) => {
       const Comp = map[sc.key];
       return (
